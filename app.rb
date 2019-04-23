@@ -8,5 +8,17 @@ configure :development do
 end
 
 get '/' do
-  'Hi Mia'
+  erb :index
 end
+
+get '/team/:username' do
+  binding.pry
+  puts params[:username]
+  "The username is #{params[:username]}"
+end
+
+
+# get '/' do
+#   @usernames = [ 'ssaunier', 'Papillard' ]
+#   erb :index
+# end
